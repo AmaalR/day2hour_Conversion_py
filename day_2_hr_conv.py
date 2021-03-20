@@ -10,14 +10,16 @@ def day_to_units(user_in_num):
 
 
 def validate_and_execute():
-    if user_in.isdigit():
+    try:
         user_in_num = int(user_in)
         if user_in_num > 0:
             calculation = day_to_units(int(user_in_num))
             print(calculation)
         elif user_in_num == 0:
             print("You entered a 0, enter correct value...")
-    else:
+        else: 
+            print("You entered a Negative number...Not Valid")
+    except ValueError:
         print("\nNot Valid Input")
 
 
