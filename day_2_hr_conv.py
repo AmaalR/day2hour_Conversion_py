@@ -1,36 +1,31 @@
 
+
 #Function section
 
 def day_to_units(user_in_num):
+
     Calculation_of_units =  24
-    if user_in_num> 0:
-        return (f'{user_in_num} days are {user_in_num * Calculation_of_units} Hours ') 
-    elif user_in_num == 0:
-        return("You entered a 0, enter correct value...")
+    return (f'{user_in_num} days are {user_in_num * Calculation_of_units} Hours ') 
+        
 
 
 def validate_and_execute():
     if user_in.isdigit():
-    # user_in_num = int(user_in)
-        calculation = day_to_units(int(user_in))
-        print(calculation)
+        user_in_num = int(user_in)
+        if user_in_num > 0:
+            calculation = day_to_units(int(user_in_num))
+            print(calculation)
+        elif user_in_num == 0:
+            print("You entered a 0, enter correct value...")
     else:
-        print("\nYour Input is not a number")
+        print("\nNot Valid Input")
 
 
-user_in = input ("Hey user !!! \nEnter the number of days : ")
-validate_and_execute()
+user_in = ""
 
-
-
-# print(user_input)
-
-
-
-# unit = input("Choose the unit which you want (seconds, hours, minutes : ")
-
-# print(unit)
+while user_in != "exit":
+    user_in = (input ("\n\nHey user !!! \nEnter the number of days : "))
+    validate_and_execute()
 
 
 
-# day_to_units(user_input)
